@@ -58,7 +58,15 @@
         
         #contact {
             padding: 80px 0;
-            background-color: #f8f6f2;
+            background-color: #0f1316;
+            color: #e5e7eb;
+            --contact-heading: #2dd4bf;
+            --contact-link: #cbd5e1;
+            --contact-link-hover: #2dd4bf;
+            --contact-muted: #9ca3af;
+            --contact-surface: #151b1f;
+            --contact-border: #1f2937;
+            --contact-accent: #2dd4bf;
         }
         
         .contact-wrapper {
@@ -77,7 +85,7 @@
             top: 0;
             bottom: 0;
             width: 3px;
-            background: repeating-linear-gradient( to bottom, #42d751 0px, #557118 10px, transparent 10px, transparent 20px);
+            background: repeating-linear-gradient( to bottom, var(--contact-accent) 0px, var(--contact-accent) 10px, transparent 10px, transparent 20px);
             transform: translateX(-50%);
             z-index: 0;
         }
@@ -89,9 +97,9 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            background: #f8f6f2;
+            background: #0f1316;
             padding: 12px 10px;
-            color: #666;
+            color: var(--contact-muted);
             font-size: 1rem;
             z-index: 1;
             border-radius: 999px;
@@ -107,7 +115,7 @@
         }
         
         .contact-details h3 {
-            color: #6b5b95;
+            color: var(--contact-heading);
             font-size: 1.6rem;
             margin-bottom: 1.2rem;
             font-weight: 600;
@@ -129,12 +137,13 @@
             align-items: center;
             gap: 1rem;
             margin-bottom: .8rem;
-            color: #333;
+            color: #e5e7eb;
             font-size: 1rem;
         }
         
-        .contact-list i {
-            color: #555;
+        .contact-list i,
+        .contact-social i {
+            color: var(--contact-accent);
             width: 18px;
             font-size: .95rem;
         }
@@ -147,25 +156,21 @@
             display: flex;
             align-items: center;
             gap: .8rem;
-            color: #333;
+            color: var(--contact-link);
             text-decoration: none;
             transition: color .3s ease;
             font-size: 1rem;
         }
         
         .contact-social a:hover {
-            color: #6b5b95;
-        }
-        
-        .contact-social i {
-            color: #555;
-            width: 18px;
+            color: var(--contact-link-hover);
         }
         
         .contact-form-wrapper {
             flex: 1;
             min-width: 280px;
-            background: #b8b3d1;
+            background: var(--contact-surface);
+            border: 1px solid var(--contact-border);
             padding: 2rem 2.5rem;
             border-radius: 25px;
             position: relative;
@@ -173,7 +178,7 @@
         }
         
         .contact-form-wrapper h3 {
-            color: #4a4080;
+            color: var(--contact-heading);
             font-size: 1.8rem;
             margin-bottom: 1.5rem;
             font-style: italic;
@@ -185,17 +190,23 @@
             width: 100%;
             padding: .9rem 1.2rem;
             margin-bottom: 1rem;
-            border: none;
+            border: 1px solid var(--contact-border);
             border-radius: 10px;
             font-family: inherit;
             font-size: 1rem;
-            background: #fff;
+            background: #101418;
+            color: #e5e7eb;
             box-sizing: border-box;
+        }
+        
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: var(--contact-muted);
         }
         
         .contact-form input:focus,
         .contact-form textarea:focus {
-            outline: 2px solid #6b5b95;
+            outline: 2px solid var(--contact-accent);
         }
         
         .contact-form textarea {
@@ -204,7 +215,7 @@
         }
         
         .btn-submit {
-            background: linear-gradient(135deg, #e07b67 0%, #c9655a 100%);
+            background: linear-gradient(135deg, #2dd4bf 0%, #0ea5a4 100%);
             color: #fff;
             border: none;
             padding: .85rem 2.2rem;
