@@ -8,6 +8,192 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="image/final.ico" type="image/x-icon">
+
+    <!-- Contact section styling (matches: dotted line + "or" + lavender form + coral button) -->
+    <style>
+        /* Contact Section */
+        
+        #contact {
+            padding: 80px 0;
+            background-color: #f8f6f2;
+        }
+        
+        .contact-wrapper {
+            display: flex;
+            gap: 4rem;
+            flex-wrap: wrap;
+            position: relative;
+            align-items: flex-start;
+        }
+        /* Vertical dotted purple line */
+        
+        .contact-wrapper::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: repeating-linear-gradient( to bottom, #6b5b95 0px, #6b5b95 10px, transparent 10px, transparent 20px);
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+        /* "or" label in the middle */
+        
+        .contact-wrapper::before {
+            content: 'or';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: #f8f6f2;
+            padding: 12px 10px;
+            color: #666;
+            font-size: 1rem;
+            z-index: 1;
+        }
+        
+        .contact-details {
+            flex: 1;
+            min-width: 280px;
+            padding-right: 3rem;
+        }
+        
+        .contact-details h3 {
+            color: #6b5b95;
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .contact-list,
+        .contact-social {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .contact-list {
+            margin-bottom: 2rem;
+        }
+        
+        .contact-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: .8rem;
+            color: #333;
+            font-size: 1rem;
+        }
+        
+        .contact-list i {
+            color: #555;
+            width: 18px;
+            font-size: .95rem;
+        }
+        
+        .contact-social li {
+            margin-bottom: .6rem;
+        }
+        
+        .contact-social a {
+            display: flex;
+            align-items: center;
+            gap: .8rem;
+            color: #333;
+            text-decoration: none;
+            transition: color .3s ease;
+            font-size: 1rem;
+        }
+        
+        .contact-social a:hover {
+            color: #6b5b95;
+        }
+        
+        .contact-social i {
+            color: #555;
+            width: 18px;
+        }
+        
+        .contact-form-wrapper {
+            flex: 1;
+            min-width: 280px;
+            background: #b8b3d1;
+            padding: 2rem 2.5rem;
+            border-radius: 25px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-form-wrapper h3 {
+            color: #4a4080;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            font-weight: 600;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: .9rem 1.2rem;
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 1rem;
+            background: #fff;
+            box-sizing: border-box;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: 2px solid #6b5b95;
+        }
+        
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .btn-submit {
+            background: linear-gradient(135deg, #e07b67 0%, #c9655a 100%);
+            color: #fff;
+            border: none;
+            padding: .85rem 2.2rem;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all .3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+        }
+        
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201, 101, 90, .4);
+        }
+        /* Responsive mobile */
+        
+        @media (max-width: 768px) {
+            .contact-wrapper {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .contact-wrapper::before,
+            .contact-wrapper::after {
+                display: none;
+            }
+            .contact-details {
+                padding-right: 0;
+            }
+            .contact-form-wrapper {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -35,7 +221,7 @@
                     <h2 class="hero-subtitle">Cybersecurity Specialist</h2>
                     <p class="hero-text">Aspiring Cybersecurity Analyst with expertise in network security, threat analysis, and risk management. Passionate about ethical hacking, incident response, and safeguarding digital assets.</p>
                     <div class="cta-buttons">
-                        <a href="#footer-contact" class="btn btn-primary"><i class="fas fa-envelope"></i> Contact Me</a>
+                        <a href="#contact" class="btn btn-primary"><i class="fas fa-envelope"></i> Contact Me</a>
                         <a href="#projects" class="btn btn-outline"><i class="fas fa-laptop-code"></i> View Projects</a>
                     </div>
                 </div>
