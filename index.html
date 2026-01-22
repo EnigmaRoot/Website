@@ -57,14 +57,14 @@
         /* Global theme */
         
          :root {
-            --page-bg: #0b0f12;
-            --page-text: #e5e7eb;
-            --page-muted: #9ca3af;
-            --heading: #e2e8f0;
-            --accent: #2dd4bf;
-            --accent-strong: #14b8a6;
-            --link: #93c5fd;
-            --link-hover: #60a5fa;
+            --page-bg: #f8fafc;
+            --page-text: #0f172a;
+            --page-muted: #6b7280;
+            --heading: #111827;
+            --accent: #1d4ed8;
+            --accent-strong: #1e40af;
+            --link: #1d4ed8;
+            --link-hover: #1e40af;
         }
         
         body {
@@ -96,16 +96,15 @@
         /* Contact Section */
         
         #contact {
-            padding: 80px 0;
-            background-color: #0f1316;
-            color: #e5e7eb;
-            --contact-heading: #2dd4bf;
-            --contact-link: #cbd5e1;
-            --contact-link-hover: #2dd4bf;
-            --contact-muted: #9ca3af;
-            --contact-surface: #151b1f;
-            --contact-border: #1f2937;
-            --contact-accent: #2dd4bf;
+            background-color: #ffffff;
+            color: var(--page-text);
+            --contact-heading: #111827;
+            --contact-link: #1f2937;
+            --contact-link-hover: #1d4ed8;
+            --contact-muted: #6b7280;
+            --contact-surface: #f3f4f6;
+            --contact-border: #e5e7eb;
+            --contact-accent: #1d4ed8;
         }
         
         .contact-wrapper {
@@ -136,7 +135,7 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            background: #0f1316;
+            background: #ffffff;
             padding: 12px 10px;
             color: var(--contact-muted);
             font-size: 1rem;
@@ -233,8 +232,8 @@
             border-radius: 10px;
             font-family: inherit;
             font-size: 1rem;
-            background: #101418;
-            color: #e5e7eb;
+            background: #ffffff;
+            color: var(--page-text);
             box-sizing: border-box;
         }
         
@@ -254,7 +253,7 @@
         }
         
         .btn-submit {
-            background: linear-gradient(135deg, #2dd4bf 0%, #0ea5a4 100%);
+            background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
             color: #fff;
             border: none;
             padding: .85rem 2.2rem;
@@ -270,7 +269,7 @@
         
         .btn-submit:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(201, 101, 90, .4);
+            box-shadow: none;
         }
         /* Responsive mobile */
         
