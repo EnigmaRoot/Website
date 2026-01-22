@@ -54,6 +54,45 @@
 
     <!-- Contact section styling (matches: dotted line + "or" + lavender form + coral button) -->
     <style>
+        /* Global theme */
+        
+         :root {
+            --page-bg: #0b0f12;
+            --page-text: #e5e7eb;
+            --page-muted: #9ca3af;
+            --heading: #e2e8f0;
+            --accent: #2dd4bf;
+            --accent-strong: #14b8a6;
+            --link: #93c5fd;
+            --link-hover: #60a5fa;
+        }
+        
+        body {
+            background-color: var(--page-bg);
+            color: var(--page-text);
+        }
+        
+        h1,
+        h2,
+        h3 {
+            color: var(--heading);
+        }
+        
+        .section-title {
+            color: var(--heading);
+        }
+        
+        p {
+            color: var(--page-text);
+        }
+        
+        a {
+            color: var(--link);
+        }
+        
+        a:hover {
+            color: var(--link-hover);
+        }
         /* Contact Section */
         
         #contact {
