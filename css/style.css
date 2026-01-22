@@ -1,6 +1,7 @@
 /* Global Styles */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap');
 :root {
     --primary-color: #0066cc;
     --secondary-color: #00cc99;
@@ -79,7 +80,9 @@ section {
     padding: 5rem 0;
 }
 
+
 /* Header & Navigation */
+
 header {
     position: relative;
     background-color: var(--dark-bg);
@@ -96,9 +99,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image:
-            radial-gradient(var(--primary-color) 1px, transparent 1px),
-            radial-gradient(var(--secondary-color) 1px, transparent 1px);
+    background-image: radial-gradient(var(--primary-color) 1px, transparent 1px), radial-gradient(var(--secondary-color) 1px, transparent 1px);
     background-size: 50px 50px;
     background-position: 0 0, 25px 25px;
     opacity: 0.05;
@@ -161,7 +162,9 @@ nav {
     cursor: pointer;
 }
 
+
 /* Hero Section */
+
 .hero {
     display: flex;
     justify-content: space-between;
@@ -278,17 +281,13 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: repeating-linear-gradient(
-            45deg,
-            transparent,
-            transparent 10px,
-            rgba(0, 204, 153, 0.1) 10px,
-            rgba(0, 204, 153, 0.1) 20px
-    );
+    background-image: repeating-linear-gradient( 45deg, transparent, transparent 10px, rgba(0, 204, 153, 0.1) 10px, rgba(0, 204, 153, 0.1) 20px);
     opacity: 0.3;
 }
 
+
 /* About Section */
+
 .about-content {
     display: flex;
     flex-wrap: wrap;
@@ -334,7 +333,9 @@ nav {
     transition: width 1s ease-in-out;
 }
 
+
 /* Skills Section */
+
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -383,7 +384,9 @@ nav {
     top: 5px;
 }
 
+
 /* Projects Section */
+
 .projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
@@ -461,7 +464,9 @@ nav {
     color: var(--secondary-color);
 }
 
+
 /* Experience & Timeline */
+
 .timeline {
     position: relative;
     max-width: 800px;
@@ -563,7 +568,30 @@ nav {
     font-size: 0.95rem;
 }
 
+.timeline-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.timeline-list li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 8px;
+    color: #64748b;
+}
+
+.timeline-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #00ff88;
+    font-weight: bold;
+}
+
+
 /* Certificates Section */
+
 .certificate-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -608,7 +636,16 @@ nav {
     font-weight: 500;
 }
 
+.certificate-id {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 0.5rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+
 /* Contact Section */
+
 .contact-form {
     max-width: 700px;
     margin: 0 auto;
@@ -665,7 +702,9 @@ textarea.form-input {
     box-shadow: var(--shadow);
 }
 
+
 /* Footer */
+
 footer {
     background-color: var(--dark-bg);
     color: var(--white);
@@ -775,7 +814,9 @@ footer {
     font-size: 0.9rem;
 }
 
+
 /* Scroll to Top Button */
+
 .scroll-to-top {
     position: fixed;
     bottom: 30px;
@@ -807,26 +848,24 @@ footer {
     transform: translateY(-5px);
 }
 
+
 /* Responsive Design */
+
 @media screen and (max-width: 1024px) {
     .hero {
         flex-direction: column;
         text-align: center;
         gap: 3rem;
     }
-
     .hero-content {
         padding-right: 0;
     }
-
     .hero-text {
         margin: 0 auto 2rem;
     }
-
     .cta-buttons {
         justify-content: center;
     }
-
     .projects-container {
         grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     }
@@ -836,35 +875,27 @@ footer {
     .nav-links {
         display: none;
     }
-
     .hamburger {
         display: block;
     }
-
     /* Responsive menu would require JavaScript */
-
     .timeline::before {
         left: 20px;
     }
-
     .timeline-item {
         width: 100%;
         padding-left: 50px;
     }
-
     .timeline-item:nth-child(even) {
         left: 0;
     }
-
     .timeline-dot {
         left: 10px;
     }
-
     .timeline-item:nth-child(odd) .timeline-dot {
         right: auto;
         left: 10px;
     }
-
     .timeline-item:nth-child(even) .timeline-content::after,
     .timeline-item:nth-child(odd) .timeline-content::after {
         left: -10px;
@@ -877,27 +908,21 @@ footer {
     .section-title {
         font-size: 2rem;
     }
-
     .hero-title {
         font-size: 2.5rem;
     }
-
     .hero-subtitle {
         font-size: 1.5rem;
     }
-
     .projects-container {
         grid-template-columns: 1fr;
     }
-
     .project-card {
         flex-direction: column;
     }
-
     .project-image {
         height: 100px;
     }
-
     .footer-content {
         flex-direction: column;
     }
