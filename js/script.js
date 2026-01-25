@@ -578,6 +578,12 @@ function setupFormValidation() {
     const subjectField = form.querySelector('[name="subject"]');
     const messageField = form.querySelector('[name="message"]');
     
+    // Check if all fields exist
+    if (!nameField || !emailField || !subjectField || !messageField) {
+        console.error('Form validation: One or more form fields not found');
+        return;
+    }
+    
     nameField.addEventListener('blur', () => {
         const error = validateName(nameField.value);
         if (error) {
